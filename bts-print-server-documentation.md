@@ -25,7 +25,7 @@ This printer is registered on the University's campus _Docking_ wired network. T
 of as "wired Eduroam". The printer's Docking IP address is: `138.38.112.82`.
 
 Using Canon drivers, available for Windows, Mac, and Linux, documents can be sent directly to the
-printer. However, this driver is tricky to make work reliably, and is also a hassle to set up on
+printer. However, this driver is tricky to make work reliably, and is a hassle to set up on
 new PCs. The driver is also not available for mobile devices.
 
 To mitigate the need for a driver on every BTS device which could conceivably be used to print
