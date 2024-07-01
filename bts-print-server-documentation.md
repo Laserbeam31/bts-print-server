@@ -63,7 +63,7 @@ by Fetchmail. _Uudeview_, a mail attachment extraction utility, is used for this
 The script used to actually poll the e-mail account, extract attachments, and send them to
 the printer is a Bash script adapted from the following website:
 
-https://blog.thomashampel.com/blog/tomcat2000.nsf/dx/print-email-attachments-with-a-raspberrypi.htm
+<https://blog.thomashampel.com/blog/tomcat2000.nsf/dx/print-email-attachments-with-a-raspberrypi.htm>
 
 This script is located at `/home/john/btsprintserver/printmail.sh` on the server.
 
