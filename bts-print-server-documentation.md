@@ -3,17 +3,17 @@ BTS Print Server Documentation
 
 The print server provides an "e-mail to print" function for the Office printer.
 
-PDF Attachments sent to _printer@bts-crew.com_ are automatically downloaded by this server and are
+PDF Attachments sent to _<printer@bts-crew.com>_ are automatically downloaded by this server and are
 sent to the Office printer.
 
 E-mail account details:
 -----------------------
 
-The printer@bts-crew.com e-mail address is stored as an account on the Backstage Technical Services
+The <printer@bts-crew.com> e-mail address is stored as an account on the Backstage Technical Services
 GSuite. For the credentials of this account, please contact a committee member.
 
 To allow automated access to the account by the print server over IMAP, an _App Password_ is configured
-on this particular account. This is a separate password to the one used by regular (human) users, and
+on this particular account. This is a separate password to that used by regular (human) users, and
 is _only_ used by the server for its automated connections.
 
 Printer details:
@@ -30,7 +30,7 @@ new PCs. The driver is also not available for mobile devices.
 
 To mitigate the need for a driver on every BTS device which could conceivably be used to print
 documents, the print server acts as an intermediary between devices and the printer. The server
-"polls" the printer@bts-crew.com address regularly for any new e-mails with PDF attachments,
+"polls" the <printer@bts-crew.com> address regularly for any new e-mails with PDF attachments,
 downloads the attachments, and sends them to the printer.
 
 Server details:
@@ -51,7 +51,7 @@ All scripts/configurations relating to the e-mail-to-print functionality are sto
 Connection from the server to the printer is done using _CUPS_, the Common Unix Printing
 System, as well as the aforementioned Canon drivers.
 
-To poll the printer@bts-crew.com e-mail account, _Fetchmail_ is used. This is a basic Linux
+To poll the <printer@bts-crew.com> e-mail account, _Fetchmail_ is used. This is a basic Linux
 IMAP e-mail client. The configuration file for fetchmail contains the settings used to poll
 the relevant GSuite e-mail account and is located at `/home/john/fetchmail.conf`. It is in
 this file where the _App Password_ (see above) is stored.
@@ -68,8 +68,8 @@ https://blog.thomashampel.com/blog/tomcat2000.nsf/dx/print-email-attachments-wit
 This script is located at `/home/john/btsprintserver/printmail.sh` on the server.
 
 When run, the script first polls the e-mail inbox for any new e-mails. If any new e-mails
-are detected, they are downloaded and any PDF attachments are extracted using Uudeview.
-Finally, using the `lpr` command, the attachments are sent to the printer.
+are detected, they are downloaded and any attachments are extracted using Uudeview.
+Finally, using the `lpr` command, the PDF attachments are sent to the printer.
 
 Note that when executed, this script only runs a single time. A Crontab job on the VM
 is therefore used to run the script repeatedly every few seconds, thus ensuring that
