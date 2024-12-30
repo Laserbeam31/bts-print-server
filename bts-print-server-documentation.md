@@ -71,7 +71,6 @@ When run, the script first polls the e-mail inbox for any new e-mails. If any ne
 are detected, they are downloaded and any attachments are extracted using Uudeview.
 Finally, using the `lpr` command, the PDF attachments are sent to the printer.
 
-Note that when executed, this script only runs a single time. A Crontab job on the VM
-is therefore used to run the script repeatedly every few seconds, thus ensuring that
-the inbox is regularly checked for new messages and that any PDFs get printed quickly.
+Note that a Cron job on the VM, in the `su2bc` user's Crontab, is used to run the script
+automatically upon boot.
 
